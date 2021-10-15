@@ -5,9 +5,9 @@ This library will allow you to make the required `dump` API calls with Jupita. A
 
 
 ## Overview
-Jupita is an API product that provides deep learning powered touchpoint analytics. Within the SDK documentation, `messageType` refers to which user the utterance is from. `messageType` 0 = `touchpoint`, and `messageType` 1 = `input`, although these labels are handled by the SDK.
+Jupita is an API product that provides deep learning powered touchpoint analytics. Within the SDK documentation, `MessageType` refers to which user the utterance is from. `MessageType` 0 = `Touchpoint`, and `MessageType` 1 = `Input`, although these labels are handled by the SDK.
 
-The required parameters for the APIs include setting `messageType`, along with assigning an `touchpointId` + `inputId` to be passed - how this is structured or deployed is completely flexible and customizable. Please note when assigning the `touchpointId` that no data will be available for that particular touchpoint until the touchpoint has sent at least 1 utterance via the `dump` API. 
+The required parameters for the APIs include setting `MessageType`, along with assigning an `touchpointId` + `inputId` to be passed - how this is structured or deployed is completely flexible and customizable. Please note when assigning the `touchpointId` that no data will be available for that particular touchpoint until the touchpoint has sent at least 1 utterance via the `dump` API. 
 
 
 ## APIs
@@ -69,7 +69,7 @@ jupita.dump("Hi, good thanks!", 3, MessageType.Input, false)
 ## Error handling
 The SDK throws 2 errors:
 - JSONException which occurs if the user input is not json compatible. This can be incorrect usage of strings when passed on to the Jupita methods.
-- IllegalArgumentException which occurs if the `messageType` set in the dump method is not 1 or 0.
+- IllegalArgumentException which occurs if the `MessageType` set in the dump method is not 1 or 0.
 
 
 ## Error Codes
@@ -94,7 +94,7 @@ const jupita = new Jupita(token, touchpointId)
 ## `dump` Method Definition
 
 ```
-dump(text: string, inputId: number, messageType: number = MessageType.Touchpoint, isCall: boolean = false, listener?: Listener)
+dump(text: string, inputId: number, MessageType: number = MessageType.Touchpoint, isCall: boolean = false, listener?: Listener)
 ```
 
 * text (required)
@@ -103,6 +103,6 @@ dump(text: string, inputId: number, messageType: number = MessageType.Touchpoint
 * isCall (required, default=false)
 * listener (optional)
 
-To avoid illegal argument error for the `messageType` argument, use `MessageType.Touchpoint` for touchpoint, and `MessageType.Input` for input.
+To avoid illegal argument error for the `MessageType` argument, use `MessageType.Touchpoint` for touchpoint, and `MessageType.Input` for input.
 
 If you require additional support please contact support@jupita.io
