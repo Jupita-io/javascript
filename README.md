@@ -60,7 +60,7 @@ jupita.dump("Hi, good thanks!", 3, MessageType.Input, false)
         console.log(statusCode)
         console.log(response)
     }, 
-    onSuccess: (week) => {
+        onSuccess: (week) => {
         console.log(week)
     }
 })
