@@ -103,6 +103,6 @@ dump(text: string, inputId: number, MessageType: number = MessageType.Touchpoint
 * isCall (required, default=false)
 * listener (optional)
 
-To avoid illegal argument error for the `MessageType` argument, use `MessageType.Touchpoint` for touchpoint, and `MessageType.Input` for input.
+To avoid illegal argument error for `MessageType`, use `MessageType.Touchpoint` or `MessageType.Input`.
 
 If you require additional support please contact support@jupita.io
