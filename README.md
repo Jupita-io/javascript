@@ -99,7 +99,7 @@ dump(text: string, inputId: number, MessageType: number = MessageType.Touchpoint
 
 * text (required)
 * inputId (required)
-* messageType (required, default = Touchpoint)
+* MessageType (required, default = Touchpoint)
 * isCall (required, default=false)
 * listener (optional)
 
