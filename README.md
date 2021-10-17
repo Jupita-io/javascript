@@ -80,8 +80,7 @@ The available product under the Javascript SDK is Jupita. Jupita can be construc
 
 ```
 const { Jupita } = require("@jupita/sdk")
-const token = '<authentication token>'
-const touchpointId = '2'
+
 const jupita = new Jupita(token, touchpointId)
 ```
 
