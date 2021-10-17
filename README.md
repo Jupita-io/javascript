@@ -21,14 +21,14 @@ There is one API within the Jupita product – `dump`:
 Install Jupita;
 
 ```
-npm install @jupita/jupita-sdk
+npm install @jupita/sdk
 ```
 
 ### Step 2
 Build Jupita. Insert your API key as the token as well as a touchpoint user ID. In the example below '2' represents the touchpointId;
 
 ```
-const { Jupita } = require("@jupita/jupita-sdk")
+const { Jupita } = require("@jupita/sdk")
 
 const jupita = new Jupita(token, touchpointId)
 ```
@@ -39,14 +39,14 @@ Dump an utterance from a touchpoint by calling the dump API as a message by spec
 The parameter `isCall` is required and set to false by default. This tells Jupita if the utterance is from an audio call. When dumping an utterance from an audio call, set the `isCall` parameter to `true` otherwise set to `false`;
 
 ```
-const { Jupita, MessageType } = require("@jupita/jupita-sdk")
+const { Jupita, MessageType } = require("@jupita/sdk")
 
 jupita.dump("Hi, how are you?", 3, MessageType.Touchpoint, false)
 ```
 
 Similarly, call the dump API whenever dumping an utterance from an input by specifying the message text and ID of the input;
 ```
-const { Jupita, MessageType } = require("@jupita/jupita-sdk")
+const { Jupita, MessageType } = require("@jupita/sdk")
 
 jupita.dump("Hi, good thanks!", 3, MessageType.Input, false)
 ```
@@ -79,7 +79,7 @@ Use Step 1 and 2 so that the Jupita Javascript SDK is available within the scope
 The available product under the Javascript SDK is Jupita. Jupita can be constructed directly using the public constructor but it is highly recommended to use the built class. This will ensure that mistakes are not made while building Jupita.
 
 ```
-const { Jupita } = require("@jupita/jupita-sdk")
+const { Jupita } = require("@jupita/sdk")
 const token = '<authentication token>'
 const touchpointId = '2'
 const jupita = new Jupita(token, touchpointId)
