@@ -1,9 +1,9 @@
 {
   "version": "1.0.1",
   "license": "MIT",
-  "main": "index.js",
+  "main": "./public/index.js",
   "files": [
-    "dist"
+    "public"
   ],
   "engines": {
     "node": ">=10"

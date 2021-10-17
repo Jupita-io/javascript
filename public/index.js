@@ -1,7 +1,7 @@
-import axios from 'axios';
-import InvalidParamException from './InvalidParamException';
+const axios = require('axios');
+const InvalidParamException = require('./InvalidParamException');
 
-export class Jupita {
+class Jupita {
   constructor(token, touchpointId) {
     if (!token) return new InvalidParamException('Token is required');
     if (!touchpointId)
@@ -28,11 +28,13 @@ export class Jupita {
       .post('https://api.jupita.io/v1/dump', data, {
         headers: { 'content-type': 'application/json' },
       })
-      .then(res => {
+      .then((res) => {
         listener?.onSuccess(res.data);
       })
-      .catch(err => {
+      .catch((err) => {
         listener?.onError(err.response.status, err.response.data);
       });
   }
 }
+
+module.exports = Jupita;
