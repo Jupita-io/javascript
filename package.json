@@ -5,6 +5,9 @@
   "files": [
     "public"
   ],
+  "keywords": [
+    "jupita"
+  ],
   "engines": {
     "node": ">=10"
   },
