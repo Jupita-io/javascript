@@ -29,8 +29,7 @@ Build Jupita. Insert your API key as the token as well as a touchpoint user ID. 
 
 ```
 const { Jupita } = require("@jupita/jupita-sdk")
-const token = '<authentication token>'
-const touchpointId = '2'
+
 const jupita = new Jupita(token, touchpointId)
 ```
 
@@ -55,7 +54,7 @@ jupita.dump("Hi, good thanks!", 3, MessageType.Input, false)
 Additionally, you may define a listener as per below;
 
 ```
-jupita.dump("Hi, good thanks!", 3, MessageType.Input, false)
+jupita.dump("Hi, good thanks!", 3, MessageType.Input, false, {
     onError: (statusCode, response) => {
         console.log(statusCode)
         console.log(response)
@@ -67,13 +66,9 @@ jupita.dump("Hi, good thanks!", 3, MessageType.Input, false)
 ```
 
 ## Error handling
-The SDK throws 2 errors:
-- JSONException which occurs if the user input is not json compatible. This can be incorrect usage of strings when passed on to the Jupita methods.
-- IllegalArgumentException which occurs if the `MessageType` set in the dump method is not 1 or 0.
+The SDK will throw an `InvalidParameterException` which occurs if the `MessageType` set in the dump method is not 1 or 0.
 
-
-## Error Codes
-Error codes thrown are 401 when the token is incorrect, otherwise Jupita returns error 400 with details.
+A 401 error code is thrown when the token is incorrect, otherwise Jupita returns error 400 with details.
 
 
 ## Libraries
@@ -90,12 +85,8 @@ const touchpointId = '2'
 const jupita = new Jupita(token, touchpointId)
 ```
 
-
-## `dump` Method Definition
-
-```
-dump(text: string, inputId: number, MessageType: number = MessageType.Touchpoint, isCall: boolean = false, listener?: Listener)
-```
+## API Reference
+#### `dump` Method Definition
 
 * text (required)
 * inputId (required)
@@ -105,4 +96,5 @@ dump(text: string, inputId: number, MessageType: number = MessageType.Touchpoint
 
 To avoid illegal argument error for `MessageType`, use `MessageType.Touchpoint` or `MessageType.Input`.
 
+## Support
 If you require additional support please contact support@jupita.io
