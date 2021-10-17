@@ -1,4 +1,4 @@
 node_modules/
 .idea
-vscode
+.vscode
 yarn.lock

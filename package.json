@@ -1,17 +1,15 @@
 {
   "version": "1.0.1",
   "license": "MIT",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "index.js",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "engines": {
     "node": ">=10"
   },
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "node index.js"
   },
   "prettier": {
     "printWidth": 80,
@@ -21,18 +19,11 @@
   },
   "name": "@jupita/jupita-sdk",
   "author": "jupita-io",
-  "module": "dist/jupita-sdk.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/jupita-sdk.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/jupita-sdk.esm.js",
-      "limit": "10 KB"
-    }
-  ],
   "dependencies": {
     "axios": "^0.23.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.0"
   }
 }
