@@ -1,4 +1,4 @@
-
+![npm](https://img.shields.io/npm/v/@jupita/sdk)
 
 # Jupita Javascript SDK
 This library will allow you to make the required `dump` API calls with Jupita. All API calls are made asynchronously, thus there are event listeners available to handle the API results.
