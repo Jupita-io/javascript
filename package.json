@@ -2,6 +2,10 @@
   "version": "1.0.2",
   "license": "MIT",
   "main": "./public/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jupita-io/javascript.git"
+  },
   "files": [
     "public"
   ],
