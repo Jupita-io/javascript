@@ -1,6 +1,6 @@
 ![npm](https://img.shields.io/npm/v/@jupita/jupita-sdk)
 
-# Jupita SDK
+# Jupita Javascript SDK
 This library will allow you to make the required `dump` API calls with Jupita. All API calls are made asynchronously, thus there are event listeners available to handle the API results.
 
 
@@ -72,11 +72,11 @@ A 401 error code is thrown when the token is incorrect, otherwise Jupita returns
 
 
 ## Libraries
-Use Step 1 and 2 so that the Jupita Android SDK is available within the scope of the project.
+Use Step 1 and 2 so that the Jupita Javascript SDK is available within the scope of the project.
 
 
 ## Classes
-The available product under the Typescript SDK is Jupita. Jupita can be constructed directly using the public constructor but it is highly recommended to use the built class. This will ensure that mistakes are not made while building Jupita.
+The available product under the Javascript SDK is Jupita. Jupita can be constructed directly using the public constructor but it is highly recommended to use the built class. This will ensure that mistakes are not made while building Jupita.
 
 ```
 const { Jupita } = require("@jupita/jupita-sdk")
