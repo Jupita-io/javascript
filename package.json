@@ -24,7 +24,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@jupita/jupita-sdk",
+  "name": "@jupita/sdk",
   "author": "jupita-io",
   "dependencies": {
     "axios": "^0.23.0"
