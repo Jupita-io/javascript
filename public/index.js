@@ -37,4 +37,4 @@ class Jupita {
   }
 }
 
-module.exports = Jupita;
+module.exports = { Jupita, MessageType: { Touchpoint: 0, Input: 1 } };
