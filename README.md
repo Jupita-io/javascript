@@ -66,9 +66,9 @@ jupita.dump("Hi, good thanks!", 3, MessageType.Input, false, {
 ```
 
 ## Error handling
-The SDK will throw an `InvalidParameterException` error which occurs if the `MessageType` set in the dump method is not 1 or 0.
-`JSONException` which occurs if the user input is not JSON compatible. This can be incorrect usage of strings when passed on to the Jupita methods.
-A 401 error code is thrown when the token is incorrect, otherwise Jupita returns error 400 with details.
+- The SDK will throw an `InvalidParameterException` error which occurs if the `MessageType` set in the dump method is not 1 or 0.
+- `JSONException` which occurs if the user input is not JSON compatible. This can be incorrect usage of strings when passed on to the Jupita methods.
+- A 401 error code is thrown when the token is incorrect, otherwise Jupita returns error 400 with details.
 
 
 ## Libraries
