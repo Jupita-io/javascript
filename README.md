@@ -85,7 +85,7 @@ const jupita = new Jupita(token, touchpointId)
 ```
 
 ## API Reference
-#### `dump` Method Definition
+#### `dump` method definition
 
 * text (required)
 * inputId (required)
