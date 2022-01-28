@@ -5,7 +5,7 @@ This library will allow you to make the required `dump` API calls with Jupita. A
 
 
 ## Overview
-Jupita is an API product that provides deep learning powered touchpoint analytics. Within the SDK documentation, `MessageType` refers to which user the utterance is from. `MessageType` 0 = `Touchpoint` and `MessageType` 1 = `Input`, although these labels are handled by the SDK.
+Jupita is an API product that provides omnichannel communications analytics. Within the SDK documentation, `MessageType` refers to which user the utterance is from. `MessageType` 0 = `Touchpoint` and `MessageType` 1 = `Input`, although these labels are handled by the SDK.
 
 The required parameters for the APIs include setting `MessageType` along with assigning a `touchpointId` + `inputId` to be passed. Please note when assigning the `touchpointId` that no data will be available for that particular touchpoint until the touchpoint has sent at least 1 utterance via the `dump` API. 
 
