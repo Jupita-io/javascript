@@ -13,7 +13,7 @@ The required parameters for the APIs include setting `MessageType` along with as
 
 You may set any touch`Touchpoint`point or `Input` ID format within the confines of JSON. How this is structured or deployed is completely customisable, for example, you may wish to use full names for users from your database, or you may wish to apply sequencing numbers for `Input` users where the user is not known. 
 
-`Touchpoint` & `Input` IDs must be unique to that user. When dumping an initial `Touchpoint` utterance where there is no `Input` user, such as creating a new Twitter post, simply pass a nominal `inputId` each time, such as '0' for example.
+`Touchpoint` & `Input` IDs must be unique to that user. When dumping an initial `Touchpoint` utterance where there is no `Input` user, such as creating a new Twitter post, simply pass a nominal `inputId` each time, such as '0' for example. It is also recommended to utilise recognisable labels when creating `touchpoint_id`'s as this will make it easier to identify channels within the dashboard UI, e.g. 'John Smith', 'Jane Doe', 'Twitter Feed', etc.
 
 ## APIs
 There is one API within the Jupita product – `dump`:
