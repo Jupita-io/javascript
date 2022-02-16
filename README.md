@@ -9,7 +9,7 @@ Jupita is an API product that provides omnichannel communications analytics. Wit
 
 Within the dashboard UI touchpoints are referred to as 'channels', and inputs are referred to as 'customers'.
 
-The required parameters for the APIs include setting `MessageType` along with assigning a `touchpointId` + `inputId` to be passed. Please note when assigning the `touchpointId` that no data will be available for that particular touchpoint until the touchpoint has sent at least 1 utterance via the `dump` API. 
+The required parameters for the APIs include setting `channelType`, `MessageType` along with assigning a `touchpointId` + `inputId` to be passed. Please note when assigning the `touchpointId` that no data will be available for that particular touchpoint until the touchpoint has sent at least 1 utterance via the `dump` API. 
 
 You may set any touch`Touchpoint`point or `Input` ID format within the confines of JSON. How this is structured or deployed is completely customisable, for example, you may wish to use full names for users from your database, or you may wish to apply sequencing numbers for `Input` users where the user is not known. 
 
@@ -41,25 +41,27 @@ const jupita = new Jupita(token, touchpointId)
 ### Step 3
 Dump an utterance from a touchpoint by calling the dump API as a message by specifying the message text and the ID of the input, represented in the example below as '3'. Message dumps are by default from a touchpoint unless otherwise specified. 
 
+The parameter `channelType` is required. This allows you to specify which channel you are deploying the SDK to. You may enter any name you wish in order to identify the channel type in the dashboard UI, e.g "Email", "Web chat", "Social media", "Phone", etc.
+
 The parameter `isCall` is required and set to false by default. This tells Jupita if the utterance is from an audio call. When dumping an utterance from an audio call, set the `isCall` parameter to `true` otherwise set to `false`;
 
 ```
 const { Jupita, MessageType } = require("@jupita/sdk")
 
-jupita.dump("Hi, how are you?", 3, MessageType.Touchpoint, false)
+jupita.dump("Hi, how are you?", 3, "Web chat", MessageType.Touchpoint, false)
 ```
 
 Similarly, call the dump API whenever dumping an utterance from an input by specifying the message text and ID of the input;
 ```
 const { Jupita, MessageType } = require("@jupita/sdk")
 
-jupita.dump("Hi, good thanks!", 3, MessageType.Input, false)
+jupita.dump("Hi, good thanks!", 3, "Web chat", MessageType.Input, false)
 ```
 
 Additionally, you may define a listener as per below;
 
 ```
-jupita.dump("Hi, good thanks!", 3, MessageType.Input, false, {
+jupita.dump("Hi, good thanks!", 3, "Web chat", MessageType.Input, false, {
     onError: (statusCode, response) => {
         console.log(statusCode)
         console.log(response)
@@ -94,6 +96,7 @@ const jupita = new Jupita(token, touchpointId)
 
 * text (required)
 * inputId (required)
+* channelType (required)
 * MessageType (required, default = Touchpoint)
 * isCall (required, default=false)
 * listener (optional)
