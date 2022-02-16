@@ -30,7 +30,7 @@ npm install @jupita/sdk
 ```
 
 ### Step 2
-Build Jupita. Insert your API key as the token as well as a touchpoint user ID;
+Build Jupita. Insert your token & touchpoint ID;
 
 ```
 const { Jupita } = require("@jupita/sdk")
