@@ -5,20 +5,22 @@ class Jupita {
   constructor(token, touchpointId) {
     if (!token) return new InvalidParamException('Token is required');
     if (!touchpointId)
-      return new InvalidParamException('Touch Point ID is required');
+      return new InvalidParamException('Touchpoint ID is required');
 
     this.token = token;
     this.touchpointId = touchpointId;
   }
 
-  dump(text, inputId, messageType = 0, isCall = false, listener) {
+  dump(text, inputId, channelType, messageType = 0, isCall = false, listener) {
     if (!text) return new InvalidParamException('Text is required');
     if (!inputId) return new InvalidParamException('Input ID is required');
+    if (!channelType) return new InvalidParamException('Channel type is required');
 
     const data = {
       token: this.token,
       touchpoint_id: this.touchpointId,
       input_id: inputId,
+      channel_type: channelType,
       message_type: messageType,
       text,
       isCall,
