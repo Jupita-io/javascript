@@ -5,7 +5,7 @@ This library will allow you to make the required `dump` API calls with Jupita. A
 
 
 ## Overview
-Jupita is an API product that provides omnichannel communications analytics. Within the SDK documentation, `MessageType` refers to which user the utterance is from. `MessageType` 0 = `Touchpoint` and `MessageType` 1 = `Input`, although these labels are handled by the SDK.
+Jupita is an API product that provides omnichannel communications analytics using OAuth 2.0 authorisation. Within the SDK documentation, `MessageType` refers to which user the utterance is from. `MessageType` 0 = `Touchpoint` and `MessageType` 1 = `Input`, although these labels are handled by the SDK.
 
 Within the dashboard UI touchpoints are referred to as 'channels', and inputs are referred to as 'customers'.
 
